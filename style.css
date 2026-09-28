@@ -19,4 +19,17 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 32px;
-)
+}
+
+h1 {
+    font-family: 'Pinyon Script', cursive;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 16px 0;
+}
+
+.label {
+    letter-spacing: 0.15em;
+    font-size: 0.9rem;
+}
