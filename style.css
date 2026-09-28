@@ -1,0 +1,14 @@
+:root {
+    --wine: #5a1424;
+    --cream: #faf3ec;
+    --gold: #c9a15b;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--wine);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    text-align: center;
+}
