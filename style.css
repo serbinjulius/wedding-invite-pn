@@ -42,3 +42,10 @@ h1 {
     outline: 1px solid var(--gold);
     outline-offset: 8px;
 }
+
+.divider {
+    width: 64px;
+    height: 1px;
+    background: var(--gold);
+    margin: 24px auto;
+}
