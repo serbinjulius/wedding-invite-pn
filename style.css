@@ -49,3 +49,35 @@ h1 {
     background: var(--gold);
     margin: 24px auto;
 }
+
+.countdown {
+    padding: 64px 24px;
+}
+
+h2 {
+    font-family: 'Pinyon Script', cursive;
+    font-weight: 400;
+    font-size: 2.2rem;
+    margin: 0 0 24px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.timer div {
+    min-width: 64px;
+    padding: 12px 4px;
+    border: 1px solid var(--gold);
+}
+
+.timer b {
+    display: block;
+    font-size: 2rem;
+}
+
+.timer span {
+    font-size: 0.8rem;
+}
