@@ -81,3 +81,45 @@ h2 {
 .timer span {
     font-size: 0.8rem;
 }
+
+.schedule {
+    padding: 64px 24px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-left: 28px;
+    text-align: left;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: var(--gold);
+}
+
+.event {
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.event::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--wine);
+}
+
+.event p {
+    margin: 0;
+}
