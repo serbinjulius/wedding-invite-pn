@@ -12,6 +12,15 @@
     background: radial-gradient(circle, #4a1120, #240710);
 }
 
+#envelope::before {
+    content: "";
+    position: absolute;
+    instet: 0;
+    background:
+	repeating-linear-gradient(45deg, transparent 0 22px, rgba(201, 161, 91, 0.08) 22px 23px),
+	repeating-linear-gradient(-45deg, transparent 0 22px, rgba(201, 161, 91, 0.08) 22px 23px);
+}
+
 .env-box {
     position: absolute;
     left: 50%;
