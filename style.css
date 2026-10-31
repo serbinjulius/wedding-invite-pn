@@ -158,3 +158,19 @@ h2 {
     color: var(--cream);
     text-decoration: none;
 }
+
+.invite{
+    padding: 64px 24px;
+}
+
+.invite-text {
+    max-width: 340px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+}
+
+.signoff {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 1.8rem;
+    font-height: 1.3;
+}
