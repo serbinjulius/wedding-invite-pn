@@ -29,3 +29,17 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+const envelope = document.getElementById("envelope");
+
+envelope.addEventListener("click", () => {
+    envelope.classList.add("open");
+
+    setTimeout(() => {
+	envelope.classList.add("done");
+	document.body.classList.remove("lock");
+	window.scrollTo(0, 0);
+    }, 2000);
+
+    setTimeout(() => envelope.remove(), 3000);
+});
