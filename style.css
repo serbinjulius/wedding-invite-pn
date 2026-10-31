@@ -125,3 +125,36 @@ h2 {
 .event p {
     margin: 0;
 }
+
+.location{
+    padding: 64px 24px;
+    background: var(--linen);
+}
+
+.venue-name {
+    font-sie: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.map {
+    max-width: 420px;
+    margin: 24px auto;
+    border: 1px solid var(--gold);
+}
+
+.map iframe {
+    display: block;
+    width: 100%;
+    height: 260px;
+    border: 0;
+}
+
+.map-link {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 40px;
+    background: var(--wine);
+    color: var(--cream);
+    text-decoration: none;
+}
