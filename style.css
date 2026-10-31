@@ -28,6 +28,11 @@
     width: min(86vw, 380px);
     aspect-ratio: 3 / 2;
     transform: translate(-50%, -50%);
+    animation: float 3.5s ease-in-out infinite;
+}
+
+@keyframes float {
+    50% { margin-top: -8px; }
 }
 
 .env-box > * {
