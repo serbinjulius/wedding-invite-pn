@@ -9,7 +9,7 @@
     position: fixed;
     inset: 0;
     z-index: 10;
-    background: #3a0b17;
+    background: radial-gradient(circle, #4a1120, #240710);
 }
 
 .env-box {
@@ -52,7 +52,7 @@
 
 .env-front {
     inset: 0;
-    background: #7d2138;
+    background: linear-gradient(160deg, #8a2640, #63182b);
     clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -61,7 +61,7 @@
     right: 0;
     top: 0;
     height: 58%;
-    background: #8a2640;
+    background: linear-gradient(#9a2c47, #7a1f35);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
