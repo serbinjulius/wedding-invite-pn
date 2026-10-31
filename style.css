@@ -5,6 +5,11 @@
     --linen: #f0e6d8;
 }
 
+html:has(body.lock),
+body.lock{
+    overflow:hidden;
+}
+
 #envelope {
     position: fixed;
     inset: 0;
