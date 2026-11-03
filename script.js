@@ -1,45 +1,91 @@
-const weddingDate = new Date("2026-11-10T17:00:00");
+// The invitation date is interpreted in the visitor's local time.
+const weddingDate = new Date(2026, 11, 13, 11, 45, 0);
+
+const countdownFields = {
+  days: document.getElementById("days"),
+  hours: document.getElementById("hours"),
+  minutes: document.getElementById("minutes"),
+  seconds: document.getElementById("seconds")
+};
 
 function updateCountdown() {
-    const now  = new Date();
-    const diff = weddingDate - now;
+  const remaining = weddingDate.getTime() - Date.now();
 
-    const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours   = Math.floor(diff / (1000 * 60 * 60)) % 24;
-    const minutes = Math.floor(diff / (1000 * 60)) % 60;
-    const seconds = Math.floor(diff / 1000) % 60;
+  if (remaining <= 0) {
+    Object.values(countdownFields).forEach((field) => {
+      if (field) field.textContent = "0";
+    });
+    const heading = document.querySelector(".countdown h2");
+    if (heading) heading.textContent = "The celebration is here!";
+    return;
+  }
 
-    document.getElementById("days").textContent = days;
-    document.getElementById("hours").textContent = hours;
-    document.getElementById("minutes").textContent = minutes;
-    document.getElementById("seconds").textContent = seconds;
+  const seconds = Math.floor(remaining / 1000);
+  const values = {
+    days: Math.floor(seconds / 86400),
+    hours: Math.floor((seconds % 86400) / 3600),
+    minutes: Math.floor((seconds % 3600) / 60),
+    seconds: seconds % 60
+  };
+
+  Object.entries(values).forEach(([unit, value]) => {
+    if (countdownFields[unit]) countdownFields[unit].textContent = String(value).padStart(2, "0");
+  });
 }
 
 updateCountdown();
+const countdownInterval = window.setInterval(() => {
+  updateCountdown();
+  if (Date.now() >= weddingDate.getTime()) window.clearInterval(countdownInterval);
+}, 1000);
 
-setInterval(updateCountdown, 1000);
-
-const observer = new IntersectionObserver((entries) => {
+// Reveal sections as they enter the viewport, with a graceful fallback.
+const revealItems = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries, currentObserver) => {
     entries.forEach((entry) => {
-	if (entry.isIntersecting) {
-	    entry.target.classList.add("visible");
-	    observer.unobserve(entry.target);
-	}
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        currentObserver.unobserve(entry.target);
+      }
     });
-}, { threshold: 0.15 });
+  }, { threshold: 0.12 });
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("visible"));
+}
 
-document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
+// Open the envelope by click, Enter, or Space.
 const envelope = document.getElementById("envelope");
+let invitationOpened = false;
 
-envelope.addEventListener("click", () => {
-    envelope.classList.add("open");
+function openInvitation() {
+  if (invitationOpened || !envelope) return;
+  invitationOpened = true;
+  envelope.classList.add("open");
+  envelope.setAttribute("aria-label", "Wedding invitation opened");
 
-    setTimeout(() => {
-	envelope.classList.add("done");
-	document.body.classList.remove("lock");
-	window.scrollTo(0, 0);
-    }, 2000);
+  window.setTimeout(() => {
+    envelope.classList.add("done");
+    document.body.classList.remove("lock");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, 1900);
 
-    setTimeout(() => envelope.remove(), 3000);
-});
+  window.setTimeout(() => envelope.remove(), 3000);
+}
+
+if (envelope) {
+  envelope.addEventListener("click", openInvitation);
+  envelope.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openInvitation();
+    }
+  });
+}
+
+
+
+
+
+

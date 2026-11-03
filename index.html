@@ -1,86 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
-    <title>Wedding Invitation</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body class="lock">
-    <div id="envelope">
-      <div class="env-box">
-	<div class="env-back"></div>
-	<div class="env-letter">
-	  <small>WEDDING INVITATION</small>
-	  <span>Bride Name</span>
-	</div>
-        <div class="env-front"></div>
-        <div class="env-flap"></div>
-        <div class="env-seal">B&amp;G</div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4ec">
+  <meta name="description" content="Wedding reception invitation for Priyanka and Nithishkumar, December 13, 2026 in Dindigul, Tamil Nadu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <title>Priyanka &amp; Nithishkumar | Wedding Reception</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lock">
+  <div id="envelope" role="button" tabindex="0" aria-label="Open wedding invitation">
+    <div class="envelope-glow" aria-hidden="true"></div>
+    <div class="env-box" aria-hidden="true">
+      <div class="env-back"></div>
+      <div class="env-letter">
+        <span class="letter-kicker">YOU ARE CORDIALLY INVITED</span>
+        <span class="letter-names">P <i>&amp;</i> N</span>
+        <span class="letter-date">13 · 12 · 2026</span>
       </div>
-      <p class="env-tap">Tap to open</p>
+      <div class="env-front"></div>
+      <div class="env-flap"></div>
+      <div class="env-seal">P<span>&amp;</span>N</div>
     </div>
+    <p class="env-tap"><span class="tap-line"></span> Tap to open <span class="tap-line"></span></p>
+  </div>
+
+  <main>
     <section class="hero">
+      <div class="hero-ornament" aria-hidden="true">✦</div>
       <div class="frame">
-	<p class="label">Wedding Day</p>
-	<h1>Bride &amp; Groom</h1>
-	<div class="divider"></div>
-	<p class="date">Saturday, October 10, 2026</p>
-	<p class="city">Dindigul, Tamil Nadu</p>
+        <p class="eyebrow">WITH THE BLESSINGS OF OUR FAMILIES</p>
+        <p class="label">Wedding Reception</p>
+        <h1>Priyanka <span>&amp;</span><br>Nithishkumar</h1>
+        <div class="divider"><span>✧</span></div>
+        <p class="date">Sunday, December 13, 2026</p>
+        <p class="city">Dindigul <span>·</span> Tamil Nadu</p>
+        <p class="hero-note">A celebration of love, family &amp; forever</p>
       </div>
+      <div class="scroll-cue" aria-hidden="true"><span></span> SCROLL TO EXPLORE</div>
     </section>
+
     <section class="countdown reveal">
-      <h2>The celebreation begins in</h2>
-      <div class="divider"></div>
-      <div class="timer">
-	<div><b id="days">0</b><span>days</span></div>
-	<div><b id="hours">0</b><span>hours</span></div>
-	<div><b id="minutes">0</b><span>minutes</span></div>
-	<div><b id="seconds">0</b><span>seconds</span></div>
+      <p class="eyebrow">SAVE THE DATE</p>
+      <h2>The celebration begins in</h2>
+      <div class="divider"><span>✧</span></div>
+      <div class="timer" aria-label="Countdown to the wedding reception">
+        <div class="time-unit"><b id="days">0</b><span>Days</span></div>
+        <div class="time-unit"><b id="hours">0</b><span>Hours</span></div>
+        <div class="time-unit"><b id="minutes">0</b><span>Minutes</span></div>
+        <div class="time-unit"><b id="seconds">0</b><span>Seconds</span></div>
       </div>
     </section>
-    <section class="schedule reveal">
-      <h2>Schedule of events</h2>
-      <div class="divider"></div>
-      <div class="timeline">
-	<div class="event">
-	  <b>5:00 PM</b>
-	  <P>Start</p>
-	</div>
-	<div class="event">
-	  <b>6:00 PM</b>
-	  <P>Ceremony</p>
-	</div>
-	<div class="event">
-	  <b>7:00 PM</b>
-	  <P>Dinner</p>
-	</div>
-	<div class="event">
-	  <b>8:00 PM</b>
-	  <P>End</p>
-	</div>
+
+    <section class="schedule reveal" id="schedule">
+      <div class="schedule-stage">
+        <div class="schedule-heading">
+          <p class="eyebrow">JOIN US FOR THE CELEBRATION</p>
+          <h2>A day to remember</h2>
+          <div class="divider"><span>✧</span></div>
+        </div>
+        <div class="timeline">
+        <div class="event"><span class="event-number">01</span><div><b>10:30 AM</b><p>Welcome &amp; gathering</p></div></div>
+        <div class="event"><span class="event-number">02</span><div><b>10:45 AM</b><p>Engagement</p></div></div>
+        <div class="event"><span class="event-number">03</span><div><b>11:45 AM</b><p>Wedding Reception</p></div></div>
+        <div class="event"><span class="event-number">04</span><div><b>2:00 PM</b><p>Conclusion</p></div></div>
+        </div>
       </div>
     </section>
+
     <section class="location reveal">
-      <h2>Location</h2>
-      <div class="divider"></div>
-      <p class="venue-name">The Venue Name</p>
-      <p>123, Example Street, Dindigul, Tamil Nadu</p>
+      <p class="eyebrow">WE LOOK FORWARD TO SEEING YOU</p>
+      <h2>Find your way</h2>
+      <div class="divider"><span>✧</span></div>
+      <p class="venue-name">Union Club</p>
+      <p class="address">No 6, Trichy - Dindigul Rd,<br>Dindigul, Tamil Nadu</p>
       <div class="map">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15696.969521256151!2d77.96244295!3d10.402314149999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1793438092591!5m2!1sen!2sin" loading="lazy" title="Venue map"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d891.4479832860848!2d77.97797608425434!3d10.364783344612334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00aa5ecc8e2ed5%3A0x4c55553f5589d155!2sDindigul%20Union%20Club!5e0!3m2!1sen!2sin!4v1793704813861!5m2!1sen!2sin" loading="lazy" title="Map showing Dindigul Union Club"></iframe>
       </div>
-      <a class="map-link" href="https://maps.app.goo.gl/u8354byeqghW2czD7" target="_blank" rel="noopener">Open in Maps</a>
+      <a class="map-link" href="https://maps.app.goo.gl/XM1nm9i6PFa9Dqpm7" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
     </section>
+
     <section class="invite reveal">
-      <h2>You are invited</h2>
-      <div class="divider"></div>
-      <p class="invite-text">
-	Together with our families, we joyfully invite you to celebrate our wedding.
-	Your presence and blessings will make our day truly special.
-      </p>
-      <p class="signoff">With love,<br>Bride &amp; Groom</p>
+      <p class="eyebrow">A NOTE FROM THE HEART</p>
+      <h2>Your presence is our present</h2>
+      <div class="divider"><span>✧</span></div>
+      <p class="invite-text">Together with our families, we joyfully invite you to celebrate our wedding. Your presence and blessings will make our day truly special.</p>
+      <p class="signoff">With love,<br><span>Priyanka &amp; Nithishkumar</span></p>
+      <div class="closing-mark" aria-hidden="true">✦</div>
     </section>
-    <script src="script.js"></script>
-  </body>
+  </main>
+  <footer>MADE WITH LOVE <span>♥</span> FOR OUR SPECIAL DAY</footer>
+  <script src="script.js"></script>
+</body>
 </html>
