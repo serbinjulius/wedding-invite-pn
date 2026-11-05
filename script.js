@@ -1,5 +1,5 @@
 // The invitation date is interpreted in the visitor's local time.
-const weddingDate = new Date(2026, 11, 13, 11, 45, 0);
+const weddingDate = new Date("2026-12-13T11:00:00+05:30");
 
 const countdownFields = {
   days: document.getElementById("days"),
